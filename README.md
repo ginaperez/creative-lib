@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# creative-lib
+
+## Initial setup
+
+This project was created using the following steps:
+
+```bash
+nvm install lts/hydrogen # installs node 18.14.2
+
+npx create-react-app creative-lib --template typescript
+cd creative-lib
+npx storybook init
+# disable telemetry in .storybook/main.js
+yarn storybook
+```
+
+**When developing in this app, make sure to use `nvm use lts/hydrogen` and `yarn` for best results.**
+
+## Boilerplate create-react-app appendix
+
+The rest of this README just contain the boilerplate `create-react-app` template.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
