@@ -1,0 +1,27 @@
+.tooltip-container {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    .tooltip-content-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid #555a64;
+        border-radius: 0.5rem;
+        width: 4rem;
+        height: 2rem;
+        color: white;
+        background-color: #555a64;
+        // opacity: 0;
+        transition: opacity 2s;
+    }
+    .tooltip-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        border: 0.01rem solid black;
+        border-radius: 1.1rem;
+        color: white;
+        background-color: black;
+    }
+}
