@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 
 interface ModalProps {
-    modalContent?: JSX.Element;
+    content?: JSX.Element;
     modalButton?: JSX.Element;
-    modalButtonVisible?: boolean;
-    modalButtonLabel?: string;
 }
 
 export const Modal = ({
-    modalContent,
+    content,
     modalButton,
-    modalButtonLabel,
-    modalButtonVisible,
 }: ModalProps) => {
     const [ isModalOpen, setIsModalOpen ] = useState(false);
     return (
@@ -20,12 +16,7 @@ export const Modal = ({
                 isModalOpen && (
                     <div className="modal-container">
                         <div className="modal-content">
-                            <p className="modal-text">
-                                {modalContent}
-                            </p>
-                            {
-                               modalButtonVisible ? <button onClick={() => setIsModalOpen(false)}>{modalButtonLabel}</button> : ''
-                            }
+                            {content}
                         </div>
                     </div>
                 )

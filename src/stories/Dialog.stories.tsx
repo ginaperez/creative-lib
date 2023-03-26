@@ -1,28 +1,28 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button } from '../components/Button';
+import { Dialog } from '../components/Dialog';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Button',
-  component: Button,
+  title: 'Components/Dialog',
+  component: Dialog,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Dialog>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button { ...args }/>;
+const Template: ComponentStory<typeof Dialog> = (args) => <Dialog { ...args }/>;
 
-export const ButtonPrimary = Template.bind({});
+export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-ButtonPrimary.args = {
-    children: 'Button',
-    onClick: () => { alert('dumb i s chuck')}
+Primary.args = {
+  bodyContent: 'This is the body',
+  headerContent: 'This is the header', 
 };
 
-// export const ButtonText = Template.bind({});
-// ButtonText.args = {
+// export const Secondary = Template.bind({});
+// Secondary.args = {
 //   label: 'Button',
 // };
 

@@ -8,9 +8,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 4rem;
-        width: 6rem;
+        font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        height: 20rem;
+        width: 35rem;
         border: solid black;
+        border-radius: 2.5rem;
         position: absolute;
     }
 }
