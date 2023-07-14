@@ -4,7 +4,9 @@ export const theme = {
         mediumBlue: "#19A7CE", // secondary
         cream: "#F6F1F1", // cream white
         black: "#000", // black
+        softBlack: "#1A2027",
         white: "#fff", // white
+        borderGray: "#E0E3E7",
         success: "#4CAF50",
         warning: "#FF9800",
         error: "#F44336",

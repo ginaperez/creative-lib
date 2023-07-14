@@ -1,12 +1,13 @@
 import React from "react";
 import { Button } from "../Button";
-import { ButtonText } from "../ButtonText";
+import { TextButton } from "../TextButton";
 import { ButtonX } from "../ButtonX";
 import {
   StyledDialogContainer,
   StyledDialogHeaderContainer,
   StyledDialogFooterContainer,
 } from "./styledComponents";
+import { StyledDialogBody } from "./styledComponents/StyledDialogBody";
 
 interface DialogProps {
   headerContent?: string;
@@ -19,13 +20,13 @@ export const Dialog = ({
 }: DialogProps) => {
   return (
     <StyledDialogContainer>
-      <StyledDialogHeaderContainer>
+      {/* <StyledDialogHeaderContainer>
         {headerContent}
         <ButtonX onClick={() => {}}/>
-    </StyledDialogHeaderContainer>
-      <div className="dialog-body">{bodyContent}</div>
+      </StyledDialogHeaderContainer> */}
+      <StyledDialogBody>{bodyContent}</StyledDialogBody>
       <StyledDialogFooterContainer>
-        <ButtonText children="Cancel" onClick={() => {}} />
+        <TextButton children="Cancel" onClick={() => {}} />
         <Button children="Submit" onClick={() => {}} />
       </StyledDialogFooterContainer>
     </StyledDialogContainer>

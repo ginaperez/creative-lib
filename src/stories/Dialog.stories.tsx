@@ -17,8 +17,7 @@ const Template: ComponentStory<typeof Dialog> = (args) => <Dialog { ...args }/>;
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  bodyContent: 'This is the body',
-  headerContent: 'This is the header', 
+  bodyContent: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Scelerisque felis imperdiet proin fermentum leo vel orci porta.',
 };
 
 // export const Secondary = Template.bind({});
