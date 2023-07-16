@@ -19,7 +19,8 @@ export const TextField = Template.bind({});
 TextField.args = {
     type: 'text',
     placeholder: 'Type something...',
-    labelText: 'Text Input Label'
+    labelText: 'Text Input Label',
+    hasLabel: true,
 };
 
 export const PasswordField = Template.bind({});
@@ -27,7 +28,8 @@ export const PasswordField = Template.bind({});
 PasswordField.args = {
     type: 'password',
     placeholder: 'Enter password',
-    labelText: 'Password Input Label'
+    hasLabel: true,
+    labelText: 'Password Input Label',
 };
 
 export const RequiredField = Template.bind({});
@@ -36,6 +38,7 @@ RequiredField.args = {
     type: 'text',
     placeholder: 'Type something...',
     required: true,
+    hasLabel: true,
     labelText: 'Required Input Label'
 };
 
@@ -45,5 +48,6 @@ Disabled.args = {
     type: 'text',
     placeholder: 'Disabled text',
     disabled: true,
+    hasLabel: true,
     labelText: 'Disabled Input Label'
 };

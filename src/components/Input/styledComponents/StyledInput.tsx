@@ -9,7 +9,7 @@ export const StyledInput = styled.input`
     padding: 0.8rem;
     border: solid 0.1rem ${theme("colors.borderGray")};
     border-radius: 0.4rem;
-    width: 20rem;
+    width: ${props => props.width ? props.width : '20rem'};;
     color: ${theme("colors.softBlack")};
     &:disabled {
         cursor: not-allowed;

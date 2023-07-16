@@ -1,26 +1,36 @@
-import React from "react";
-import { StyledDropDown } from "./styledComponents";
+import React, { useState } from "react";
+import { StyledDropDownButton, StyledDropDownContainer } from "./styledComponents";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import { StyledDropDownContentContainer } from "./styledComponents/StyledDropDownContentContainer";
 
 interface DropDownProps {
   id?: string;
   name?: string;
-  placeholder?: string;
+  placeholderText?: string;
   children: JSX.Element;
 }
 
 export const DropDown = ({
   id,
   name,
-  placeholder,
+  placeholderText,
   children,
 }: DropDownProps) => {
+  const [ isHovering, setIsHovering ] = useState(false);
+
   return (
-    <StyledDropDown
-        id={id}
-        name={name}
-        placeholder={placeholder}
-    >
-      {children}
-    </StyledDropDown>
+    <StyledDropDownContainer>
+      <StyledDropDownButton
+          id={id}
+          name={name}
+      >
+        {placeholderText}
+        <FontAwesomeIcon icon={faCaretDown} />
+      </StyledDropDownButton>
+      <StyledDropDownContentContainer>
+        {children}
+      </StyledDropDownContentContainer>
+    </StyledDropDownContainer>
   );
 };

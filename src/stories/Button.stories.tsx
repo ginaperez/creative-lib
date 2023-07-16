@@ -33,7 +33,7 @@ Text.args = {
   onClick: () => { alert('Text Clicked')}
 };
 
-export const Close = ButtonClose.bind({});
-Close.args = {
-  onClick: () => { alert('X Clicked')},
-};
+// export const Close = ButtonClose.bind({});
+// Close.args = {
+//   onClick: () => { alert('X Clicked')},
+// };

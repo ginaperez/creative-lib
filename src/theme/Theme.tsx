@@ -7,6 +7,8 @@ export const theme = {
         softBlack: "#1A2027",
         white: "#fff", // white
         borderGray: "#E0E3E7",
+        borderDarkGray: "#D1D6EE",
+        borderDarkGrayHover: "#BBC1E1",
         success: "#4CAF50",
         warning: "#FF9800",
         error: "#F44336",
