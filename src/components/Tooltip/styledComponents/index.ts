@@ -1,3 +1,3 @@
-export * from './StyledTooltipContentContainer';
+export * from './StyledTooltipContent';
 export * from './StyledTooltipIcon';
 export * from './StyledTooltipContainer';

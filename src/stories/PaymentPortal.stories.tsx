@@ -1,11 +1,11 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { PaymentPortal } from '../components/PaymentPortal';
+import { PaymentPortal } from '../prototypes';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Payment Portal',
+  title: 'Prototypes/Payment Portal',
   component: PaymentPortal,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 
@@ -14,8 +14,8 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof PaymentPortal> = (args) => <PaymentPortal { ...args }/>;
 
-export const Primary = Template.bind({});
+export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
+Default.args = {
     headingText: 'Add a new card'
 };

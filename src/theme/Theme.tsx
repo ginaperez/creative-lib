@@ -9,6 +9,7 @@ export const theme = {
         borderGray: "#E0E3E7",
         borderDarkGray: "#D1D6EE",
         borderDarkGrayHover: "#BBC1E1",
+        disabled: "#939393",
         success: "#4CAF50",
         warning: "#FF9800",
         error: "#F44336",

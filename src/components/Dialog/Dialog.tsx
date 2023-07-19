@@ -1,35 +1,60 @@
-import React from "react";
-import { Button } from "../Button";
-import { TextButton } from "../TextButton";
-import { ButtonX } from "../ButtonX";
+import React, { useState } from "react";
+import { Button } from "../../elements/Button";
 import {
   StyledDialogContainer,
-  StyledDialogHeaderContainer,
   StyledDialogFooterContainer,
+  StyledDialogBody,
+  StyledDialogButton,
 } from "./styledComponents";
-import { StyledDialogBody } from "./styledComponents/StyledDialogBody";
 
 interface DialogProps {
-  headerContent?: string;
   bodyContent?: string;
+  dialogButtonText: string;
 }
 
 export const Dialog = ({
-  headerContent,
   bodyContent,
+  dialogButtonText
 }: DialogProps) => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [ isButtonVisible, setIsButtonVisible ] = useState(true);
+
   return (
-    <StyledDialogContainer>
-      {/* <StyledDialogHeaderContainer>
-        {headerContent}
-        <ButtonX onClick={() => {}}/>
-      </StyledDialogHeaderContainer> */}
-      <StyledDialogBody>{bodyContent}</StyledDialogBody>
-      <StyledDialogFooterContainer>
-        <TextButton children="Cancel" onClick={() => {}} />
-        <Button children="Submit" onClick={() => {}} />
-      </StyledDialogFooterContainer>
-    </StyledDialogContainer>
+    <>
+      {isDialogOpen && (
+        <StyledDialogContainer>
+        <StyledDialogBody>{bodyContent}</StyledDialogBody>
+        <StyledDialogFooterContainer>
+          <Button
+            type='text'
+            children="Cancel"
+            onClick={() => {
+              setIsDialogOpen(false); 
+              setIsButtonVisible(true); 
+            }} 
+          />
+          <Button
+            children="Submit"
+            onClick={() => {
+              setIsDialogOpen(false);
+              setIsButtonVisible(true);
+            }} 
+          />
+        </StyledDialogFooterContainer>
+        </StyledDialogContainer>
+      )}
+      {
+        isButtonVisible && (
+          <StyledDialogButton
+            onClick={() => {
+              setIsDialogOpen(true);
+              setIsButtonVisible(false);
+            }}
+            children={dialogButtonText as string} 
+          />
+        )
+      }
+    </>
   );
 };
 

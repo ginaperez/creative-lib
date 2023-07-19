@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import {
   StyledTooltipContainer,
-  StyledTooltipContentContainer,
+  StyledTooltipContent,
   StyledTooltipIcon,
 } from "./styledComponents";
+// import './tooltip.css';
 
 interface TooltipProps {
   tooltipContent?: string;
@@ -14,25 +15,31 @@ export const Tooltip = ({
     tooltipContent,
     tooltipIcon
 }: TooltipProps) => {
-  const [isActive, setIsActive] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  // const [tooltipClassName, setTooltipClassName] = useState('');
 
   return (
-    <StyledTooltipContainer>
+    <StyledTooltipContainer >
       <StyledTooltipIcon
         onMouseEnter={() => {
-          setIsActive(true);
+          // setTooltipClassName('tooltip-fade-in');
+          setIsVisible(true);
         }}
         onMouseLeave={() => {
-          setIsActive(false);
+          // setTooltipClassName('tooltip-fade-out');
+          setTimeout(() => {
+            setIsVisible(false);
+            // setTooltipClassName('');
+          }, 1000);
         }}
       >
         {tooltipIcon}
       </StyledTooltipIcon>
-      {isActive && (
+      {isVisible && (
         <>
-          <StyledTooltipContentContainer>
+          <StyledTooltipContent visible={isVisible}>
             {tooltipContent}
-          </StyledTooltipContentContainer>
+          </StyledTooltipContent>
         </>
       )}
     </StyledTooltipContainer>

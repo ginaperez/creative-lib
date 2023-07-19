@@ -10,5 +10,5 @@ export const StyledTooltipIcon = styled.span`
     border: 0.01rem solid ${theme('colors.borderGray')};
     border-radius: 1.1rem;
     color: ${theme('colors.white')};
-    background-color: ${theme('colors.black')};
+    background-color: ${theme('colors.mediumBlue')};
 `
