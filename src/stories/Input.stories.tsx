@@ -1,23 +1,21 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { StoryFn, Meta } from '@storybook/react';
 import { Input } from '../elements';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreditCard } from '@fortawesome/free-solid-svg-icons';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Elements/Inputs',
   component: Input,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+  parameters: {
+    layout: 'centered',
+  }
+} as Meta<typeof Input>;
 
-} as ComponentMeta<typeof Input>;
-
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Input> = (args) => <Input { ...args }/>;
+const Template: StoryFn<typeof Input> = (args) => <Input { ...args }/>;
 
 export const TextField = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
+
 TextField.args = {
     id: 'text-input',
     type: 'text',
@@ -27,7 +25,7 @@ TextField.args = {
 };
 
 export const PasswordField = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
+
 PasswordField.args = {
     id: 'password-input',
     type: 'password',
@@ -36,18 +34,8 @@ PasswordField.args = {
     width: '20rem;',
 };
 
-// export const RequiredField = Template.bind({});
-// // More on args: https://storybook.js.org/docs/react/writing-stories/args
-// RequiredField.args = {
-//     type: 'text',
-//     placeholder: 'Type something...',
-//     required: true,
-//     hasLabel: true,
-//     labelText: 'Required Input Label'
-// };
-
 export const WithIcon = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
+
 WithIcon.args = {
     id: 'withIcon-input',
     type: 'text',
@@ -59,7 +47,7 @@ WithIcon.args = {
 };
 
 export const Disabled = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
+
 Disabled.args = {
     id: 'diabled-input',
     type: 'text',

@@ -1,14 +1,27 @@
 import React, { useState } from "react";
-import { StyledDropDownButton, StyledDropDownContainer } from "./styledComponents";
+import { StyledDropdownLabel, StyledDropdownOption, StyledDropdownSelect } from "./styledComponents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
-import { StyledDropDownContentContainer } from "./styledComponents/StyledDropDownContentContainer";
+
+interface OptionType {
+  value: string;
+  label: string;
+}
 
 interface DropDownProps {
+  // options: OptionType[];
+  value?: string;
   id?: string;
   name?: string;
-  placeholderText?: string;
+  placeholderText: string;
   children: JSX.Element;
+  labelText?: string;
+  /**
+   * Sets the width using a number
+   * with rem. Default width is 10rem
+   */
+  width?: number;
+  multiple?: boolean;
 }
 
 export const DropDown = ({
@@ -16,34 +29,33 @@ export const DropDown = ({
   name,
   placeholderText,
   children,
+  labelText,
+  width,
+  multiple,
+  // options,
+  value
 }: DropDownProps) => {
-  const [ isActive, setIsActive ] = useState(false);
 
   return (
-    <StyledDropDownContainer
-      onMouseEnter={() => {
-        setIsActive(true);
-        console.log('this is active');
-      }}
-      onMouseLeave={() => {
-        setIsActive(false);
-        console.log('this has become inactive');
-      }}
-    >
-      <StyledDropDownButton
-          id={id}
-          name={name}
+    <>
+      <StyledDropdownLabel
+        htmlFor={id}
       >
-        {placeholderText}
+        {labelText}
+      </StyledDropdownLabel>
+      <StyledDropdownSelect
+        id={id}
+        name={name}
+        placeholder={placeholderText}
+        width={width}
+        multiple={multiple}
+        value={value}
+      >
+        <StyledDropdownOption>
+          {children}
+        </StyledDropdownOption>
         <FontAwesomeIcon icon={faCaretDown} />
-      </StyledDropDownButton>
-      {
-        isActive && (
-          <StyledDropDownContentContainer>
-            {children}
-          </StyledDropDownContentContainer>
-        )
-      }
-    </StyledDropDownContainer>
+      </StyledDropdownSelect>
+    </>
   );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { StoryFn, Meta } from '@storybook/react';
 import { Button } from '../elements';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -8,11 +7,13 @@ export default {
   title: 'Elements/Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-
-} as ComponentMeta<typeof Button>;
+  parameters: {
+    layout: 'centered',
+  }
+} as Meta<typeof Button>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const ButtonStory: ComponentStory<typeof Button> = (args) => <Button { ...args }/>;
+const ButtonStory: StoryFn<typeof Button> = (args) => <Button { ...args }/>;
 
 export const Default = ButtonStory.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
