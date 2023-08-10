@@ -1,0 +1,20 @@
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.StyledButton = void 0;
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledTools = require("styled-tools");
+var _templateObject, _templateObject2, _templateObject3;
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+var StyledButton = _styledComponents.default.button(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    // default button styling\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: ", ";\n    background-color: ", ";\n    min-width: 8rem;\n    min-height: 3.5rem;\n    padding: 1rem;\n    border: 0.2rem solid ", ";\n    border-radius: 1.7rem;\n    font-family: ", ";\n    font-weight: 500;\n    font-size: 1rem;\n    transition: 0.3s;\n    &:hover {\n        cursor: pointer;\n        color: ", ";\n        background-color: ", ";\n        border: 0.2rem solid ", ";\n    }\n\n    // text button styling\n    ", "\n\n    // square button styling\n    ", "\n"])), (0, _styledTools.theme)("colors.white"), (0, _styledTools.theme)("colors.darkBlue"), (0, _styledTools.theme)("colors.darkBlue"), (0, _styledTools.theme)("fonts.nunito"), (0, _styledTools.theme)("colors.white"), (0, _styledTools.theme)("colors.mediumBlue"), (0, _styledTools.theme)("colors.mediumBlue"), function (props) {
+  return props.text && (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n        background: none;\n        border: none;\n        padding: 0;\n        min-width: 0;\n        font-weight: 500;\n        font-size: 1rem;\n        color: ", ";\n        transition: 0.3s;\n        &:hover {\n            color: ", ";\n            border: none;\n            background: none;\n            cursor: pointer;\n        }\n    "])), (0, _styledTools.theme)("colors.darkBlue"), (0, _styledTools.theme)("colors.mediumBlue"));
+}, function (props) {
+  return props.square && (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n        min-width: 10rem;\n        min-height: 3rem;\n        border-radius: 0.8rem;\n    "])));
+});
+exports.StyledButton = StyledButton;
+//# sourceMappingURL=StyledButton.js.map
