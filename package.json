@@ -2,6 +2,7 @@
   "name": "creative-lib",
   "version": "0.1.0",
   "private": false,
+  "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
