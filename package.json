@@ -1,6 +1,8 @@
 {
   "name": "creative-lib",
   "version": "0.1.0",
+  "description": "A collection of UX components",
+  "main": "dist/index.js",
   "private": false,
   "license": "MIT",
   "dependencies": {
