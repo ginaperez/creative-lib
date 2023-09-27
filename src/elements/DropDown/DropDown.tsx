@@ -3,19 +3,19 @@ import { StyledDropdownLabel, StyledDropdownOption, StyledDropdownSelect } from 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
-interface OptionType {
-  value: string;
-  label: string;
-}
+// interface OptionType {
+//   value: string;
+//   label: string;
+// }
 
 interface DropDownProps {
-  // options: OptionType[];
+  options: HTMLOptionElement[];
   value?: string;
   id?: string;
   name?: string;
   placeholderText: string;
   children: JSX.Element;
-  labelText?: string;
+  label?: string;
   /**
    * Sets the width using a number
    * with rem. Default width is 10rem
@@ -29,20 +29,22 @@ export const DropDown = ({
   name,
   placeholderText,
   children,
-  labelText,
+  label,
   width,
   multiple,
-  // options,
+  options,
   value
 }: DropDownProps) => {
 
   return (
     <>
-      <StyledDropdownLabel
+      {label && (
+        <StyledDropdownLabel
         htmlFor={id}
-      >
-        {labelText}
-      </StyledDropdownLabel>
+        >
+          {label}
+        </StyledDropdownLabel>
+      )}
       <StyledDropdownSelect
         id={id}
         name={name}
@@ -51,10 +53,12 @@ export const DropDown = ({
         multiple={multiple}
         value={value}
       >
-        <StyledDropdownOption>
-          {children}
-        </StyledDropdownOption>
-        <FontAwesomeIcon icon={faCaretDown} />
+        {options.map((option, index) => (
+          <option key={index} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+        {/* <FontAwesomeIcon icon={faCaretDown} /> */}
       </StyledDropdownSelect>
     </>
   );

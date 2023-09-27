@@ -11,18 +11,22 @@ const Template: StoryFn<typeof DropDown> = (args) => <DropDown { ...args }/>;
 
 export const Default = Template.bind({});
 
+const dropdownOptions = [
+  {value: 'option1', label: 'Option 1'}
+];
+
 Default.args = {
     name: 'DropDown',
-    labelText: 'Dropdown Label',
+    label: 'Dropdown Label',
     placeholderText: 'Select',
-    children: <option>Hello World!</option>
+    options: dropdownOptions,
 };
 
 export const MultipleSelect = Template.bind({});
 
 MultipleSelect.args = {
     name: 'Mutliple',
-    labelText: 'Multiple Select Label',
+    label: 'Multiple Select Label',
     // placeholderText: 'Select',
     // options: options,
     // value: selectedValue,

@@ -15,5 +15,6 @@ const Template: StoryFn<typeof Checkbox> = (args) => <Checkbox { ...args }/>;
 export const Default = Template.bind({});
 
 Default.args = {
-    name: 'Checkbox'
+    name: 'Checkbox',
+    label: 'Checkbox label'
 };

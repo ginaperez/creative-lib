@@ -15,7 +15,7 @@ export const StyledButton = styled.button<{
     min-height: 3.5rem;
     padding: 1rem;
     border: 0.2rem solid ${theme("colors.darkBlue")};
-    border-radius: 1.7rem;
+    border-radius: 2rem;
     font-family: ${theme("fonts.nunito")};
     font-weight: 500;
     font-size: 1rem;
