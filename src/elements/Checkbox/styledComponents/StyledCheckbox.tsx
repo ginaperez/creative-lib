@@ -1,6 +1,7 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
+import { theme } from "styled-tools";
 
-const shrinkBounce = keyframes`
+const checkBounce = keyframes`
   0%{
     transform: scale(1);
   }
@@ -12,7 +13,7 @@ const shrinkBounce = keyframes`
   }
 `;
 
-const checkboxCheck = keyframes`
+const checkIcon = keyframes`
   0%{
     width: 0;
     height: 0;
@@ -27,27 +28,24 @@ const checkboxCheck = keyframes`
   100%{    
     width: .2em;
     height: .5em;    
-    border-color: #212121;
-    transform: translate3d(0,-.5em,0) rotate(45deg);
+    border-color: #fff;
+    transform: translate3d(-.1em,-.65em,0) rotate(45deg);
   }
 `;
 
 export const StyledCheckbox = styled.input`
-  /* height: 0;
-  width: 0; */
-  visibility: hidden;
-  position: absolute;
+  height: 0;
+  width: 0;
 
-  + label {
+  & + label {
     position: relative;
     display: flex;
-    margin: .6em 0;
+    margin: 0.6em 0;
     align-items: center;
-    color: blue;
-    transition: color 250ms cubic-bezier(.4,.0,.23,1);
+    color: #9e9e9e;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.23, 1);
   }
-
-  + label > ins {
+  & + label > ins {
     position: absolute;
     display: block;
     bottom: 0;
@@ -56,56 +54,68 @@ export const StyledCheckbox = styled.input`
     width: 100%;
     overflow: hidden;
     text-decoration: none;
-    transition: height 300ms cubic-bezier(.4,.0,.23,1);
+    transition: height 300ms cubic-bezier(0.4, 0, 0.23, 1);
   }
-
-  + label > ins > i {
+  & + label > ins > i {
     position: absolute;
     bottom: 0;
     font-style: normal;
-    color: #4FC3F7;
+    color: ${theme('colors.mediumBlue')};
   }
-
-  + label > span {
+  & + label > span {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 1em;
-    width: 1em;
-    height: 1em;
+    margin-right: 0.74rem;
+    width: 1.25rem;
+    height: 1.25rem;
     background: transparent;
-    border: 2px solid green;
-    border-radius: 2px;
-    cursor: pointer;  
-    transition: all 250ms cubic-bezier(.4,.0,.23,1);
+    border: 0.15rem solid #9e9e9e;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.23, 1);
   }
 
-  + label:hover, &:focus + label {
-    color: red;
+  & + label:hover,
+  &:focus + label {
+    color: ${theme("colors.darkBlue")};
   }
-
-  + label:hover > span, &:focus + label > span {
-    background: rgba(255,255,255,.1);
+  & + label:hover > span,
+  &:focus + label > span {
+    background: rgba(255, 255, 255, 0.1);
   }
-
   &:checked + label > ins {
     height: 100%;
   }
 
   &:checked + label > span {
-    border: .5em solid #FFEB3B;
-    animation: ${shrinkBounce} 200ms cubic-bezier(.4,.0,.23,1);
+    border: 0.65rem solid ${theme("colors.mediumBlue")};
+    animation: ${checkBounce} 200ms cubic-bezier(0.4, 0, 0.23, 1);
   }
-
   &:checked + label > span:before {
     content: "";
     position: absolute;
-    top: .6em;
-    left: .2em;
-    border-right: 3px solid transparent;
-    border-bottom: 3px solid transparent;
+    top: 0.6rem;
+    left: 0.3rem;
+    border-right: 0.3rem solid transparent;
+    border-bottom: 0.3rem solid transparent;
     transform: rotate(45deg);
     transform-origin: 0% 100%;
-    animation: ${checkboxCheck} 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards;
+    animation: ${checkIcon} 125ms 250ms cubic-bezier(0.4, 0, 0.23, 1)
+      forwards;
   }
-`
+`;
+
+export const GlobalStyles = styled.div`
+  font-family: ${theme("fonts.nunito")};
+
+  * {
+    box-sizing: border-box;
+    user-select: none;
+  }
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+  }
+`;

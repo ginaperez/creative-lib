@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { StyledModalContainer, StyledModalContent } from "./styledComponents";
 
 interface ModalProps {

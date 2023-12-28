@@ -5,13 +5,14 @@ import { Heading } from '../foundation';
 export default {
   title: 'Foundation/Headings',
   component: Heading,
+  tags: ['autodocs'],
 } as Meta<typeof Heading>;
 
 const Template: StoryFn<typeof Heading> = (args) => <Heading { ...args }/>;
 
-export const Headings = Template.bind({});
+export const Default = Template.bind({});
 
-Headings.args = {
+Default.args = {
     h1Text: "H1 Heading",
     h2Text: "H2 Heading",
     h3Text: "H3 Heading",

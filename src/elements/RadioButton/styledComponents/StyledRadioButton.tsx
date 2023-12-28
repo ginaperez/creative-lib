@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
 export const StyledRadioButton = styled.input<{ speed?: number }>`
-  --s: 1em; /* control the size */
+  --s: 1.3em; /* control the size */
   --c: ${theme('colors.darkBlue')}; /* the active color */
   
-  height: 1.25rem;
+  height: 1.7rem;
   aspect-ratio: 1;
   border: calc(var(--s)/8) solid ${theme('colors.borderGray')};
   padding: calc(var(--s)/8);

@@ -5,6 +5,7 @@ import { TextArea } from '../elements';
 export default {
   title: 'Elements/Text Area',
   component: TextArea,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   }

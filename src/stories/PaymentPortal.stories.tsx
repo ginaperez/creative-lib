@@ -5,6 +5,7 @@ import { PaymentPortal } from '../prototypes';
 export default {
   title: 'Prototypes/Payment Portal',
   component: PaymentPortal,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   }

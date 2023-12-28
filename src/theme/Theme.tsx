@@ -22,6 +22,7 @@ export const theme = {
         accentPurple: "#9C27B0", // accent
     },
     fonts: {
-        nunito: "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        nunito: "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        fira: "'Fira Mono', monospace",
     }
 }

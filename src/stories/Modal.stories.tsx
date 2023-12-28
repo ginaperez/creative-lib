@@ -5,6 +5,7 @@ import { StoryFn, Meta } from '@storybook/react';
 export default {
     title: 'Modules/Modal',
     component: Modal,
+    tags: ['autodocs'],
 } as Meta<typeof Modal>;
 
 const Template: StoryFn<typeof Modal> = (args) => <Modal {...args}/>;

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { StyledCheckbox, StyledCheckboxLabel } from "./styledComponents";
+import { useState } from "react";
+import { GlobalStyles, StyledCheckbox } from "./styledComponents";
 
 interface CheckboxProps {
-  id?: string;
+  id: string;
   name?: string;
   label?: string;
 }
@@ -19,20 +19,25 @@ export const Checkbox = ({
   }
 
   return (
-    <>
+    <GlobalStyles>
       <StyledCheckbox
         type="checkbox"
         id={id}
         name={name}
-        // checked={true}
-        // onChange={handleChange}
+        checked={isChecked}
+        onChange={handleChange}
       />
         {label &&
-          <StyledCheckboxLabel htmlFor={id}>
+          <label htmlFor={id}>
             <span></span>
             {label}
-            <ins><i>{label}</i></ins>
-          </StyledCheckboxLabel>}
-    </>
+            <ins>
+              <i>
+                {label}
+              </i>
+            </ins>
+          </label>
+        }
+    </GlobalStyles>
   );
 };

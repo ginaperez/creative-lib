@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { StyledInput, StyledInputContainer, StyledInputLabel } from "./styledComponents";
 import { StyledInputLabelContainer } from "./styledComponents/StyledInputLabelContainer";
 

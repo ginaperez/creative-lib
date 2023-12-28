@@ -5,6 +5,7 @@ import { Dialog } from '../modules/';
 export default {
   title: 'Modules/Dialog',
   component: Dialog,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   }

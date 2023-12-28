@@ -5,6 +5,7 @@ import { Toggle } from '../elements/';
 export default {
   title: 'Elements/Toggle',
   component: Toggle,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   }

@@ -6,8 +6,8 @@ export const StyledColorBox = styled.span<{ backgroundColor: string, textColor: 
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2.75rem;
-    width: 10rem;
+    height: 4rem;
+    width: 13rem;
     color: ${(props) => (props.textColor)};
     background-color: ${(props) => (props.backgroundColor)};
 `

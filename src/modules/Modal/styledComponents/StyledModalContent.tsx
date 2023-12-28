@@ -9,8 +9,5 @@ export const StyledModalContent = styled.p`
   height: 20rem;
   width: 35rem;
   line-height: 1.5;
-  /* border: solid black; */
-  /* border-radius: 2.5rem; */
-  /* position: absolute; */
   padding: 2rem;
 `;

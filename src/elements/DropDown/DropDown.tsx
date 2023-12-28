@@ -1,20 +1,24 @@
-import React, { useState } from "react";
-import { StyledDropdownLabel, StyledDropdownOption, StyledDropdownSelect } from "./styledComponents";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  StyledDropdownLabel,
+  StyledDropdownOption,
+  StyledDropdownSelect,
+} from "./styledComponents";
 
-// interface OptionType {
-//   value: string;
-//   label: string;
-// }
+interface OptionType {
+  value: string;
+  label: string;
+}
 
 interface DropDownProps {
-  options: HTMLOptionElement[];
+  /**
+   * Use optionsArray when mapping
+   * dropdown options from an array
+   */
+  optionsArray?: OptionType[];
   value?: string;
   id?: string;
   name?: string;
   placeholderText: string;
-  children: JSX.Element;
   label?: string;
   /**
    * Sets the width using a number
@@ -22,29 +26,31 @@ interface DropDownProps {
    */
   width?: number;
   multiple?: boolean;
+  autoFocus?: boolean;
+  disabled?: boolean;
+  type?: string;
+  size?: number;
+  length?: number;
+  selectedIndex?: number;
+  icon?: string;
 }
 
 export const DropDown = ({
   id,
   name,
   placeholderText,
-  children,
   label,
   width,
   multiple,
-  options,
-  value
+  optionsArray,
+  value,
+  autoFocus,
+  size,
+  icon,
 }: DropDownProps) => {
-
   return (
     <>
-      {label && (
-        <StyledDropdownLabel
-        htmlFor={id}
-        >
-          {label}
-        </StyledDropdownLabel>
-      )}
+      {label && <StyledDropdownLabel htmlFor={id}>{label}</StyledDropdownLabel>}
       <StyledDropdownSelect
         id={id}
         name={name}
@@ -52,14 +58,21 @@ export const DropDown = ({
         width={width}
         multiple={multiple}
         value={value}
+        autoFocus={autoFocus}
+        size={size}
+        icon={icon}
       >
-        {options.map((option, index) => (
-          <option key={index} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-        {/* <FontAwesomeIcon icon={faCaretDown} /> */}
+        {
+          optionsArray && (optionsArray.map((option) => (
+            <StyledDropdownOption value={option.value}>
+              {option.label}
+            </StyledDropdownOption>
+          )))
+        }
+        {/* {!multiple && <StyledDropdownIcon icon={faCaretDown} />} */}
       </StyledDropdownSelect>
     </>
   );
 };
+
+export default DropDown;

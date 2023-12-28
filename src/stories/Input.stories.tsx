@@ -7,6 +7,7 @@ import { faCreditCard } from '@fortawesome/free-solid-svg-icons';
 export default {
   title: 'Elements/Inputs',
   component: Input,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   }
