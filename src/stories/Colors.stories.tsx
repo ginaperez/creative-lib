@@ -1,5 +1,5 @@
 import { StoryFn, Meta } from '@storybook/react';
-import { Colors } from '../foundation/';
+import { Colors } from '../atoms';
 
 const primaryColors = [
   {name: "Primary", hex: "#146C94", textColor: "#FFFFFF"},
@@ -21,7 +21,7 @@ const darkModeColors = [
 ]
 
 export default {
-  title: 'Foundation/Colors',
+  title: 'Design System/Components/Colors',
   component: Colors,
   tags: ['autodocs'],
   parameters: {

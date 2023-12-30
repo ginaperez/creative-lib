@@ -1,9 +1,8 @@
-import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-import { Checkbox } from '../elements/';
+import { Checkbox } from '../molecules';
 
 export default {
-  title: 'Elements/Checkbox',
+  title: 'Design System/Components/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
   parameters: {

@@ -1,8 +1,8 @@
 import { StoryFn, Meta } from '@storybook/react';
-import { TextCopy } from '../modules/';
+import { TextCopy } from '../organisms';
 
 export default {
-  title: 'Modules/Text Copy',
+  title: 'Design System/Components/Text Copy',
   component: TextCopy,
   parameters: {
     layout: 'centered',
@@ -19,4 +19,6 @@ Default.args = {
     label: 'Copy text label',
     descriptionHeading: 'Text Copy',
     description: 'This is description',
+    copyButtonId: "f10537bc-dcd1-4f22-83e5-01724a26d847",
+    tooltipId: "7983131f-3491-480a-a103-80fa3a84d804",
 };

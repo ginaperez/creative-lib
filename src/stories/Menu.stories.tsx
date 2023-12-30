@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu } from "../elements";
+import { Menu } from "../molecules";
 import { StoryFn, Meta } from "@storybook/react";
 
 const mockMenu = [
@@ -9,7 +9,7 @@ const mockMenu = [
 ];
 
 export default {
-  title: "Elements/Menu",
+  title: "Design System/Components/Menu",
   component: Menu,
   tags: ['autodocs'],
 } as Meta<typeof Menu>;
