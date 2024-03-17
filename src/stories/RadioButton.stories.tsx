@@ -1,10 +1,11 @@
 import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-import { RadioButton } from '../elements';
+import { RadioButton } from '../molecules';
 
 export default {
-  title: 'Elements/Radio Button',
+  title: 'Design System/Components/Radio Button',
   component: RadioButton,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   }

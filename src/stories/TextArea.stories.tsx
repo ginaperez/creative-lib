@@ -1,10 +1,11 @@
 import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-import { TextArea } from '../elements';
+import { TextArea } from '../molecules';
 
 export default {
-  title: 'Elements/Text Area',
+  title: 'Design System/Components/Text Area',
   component: TextArea,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   }

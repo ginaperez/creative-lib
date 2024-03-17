@@ -1,4 +1,3 @@
-import React from "react";
 import {
   StyledPortalContainer,
   StyledPortalHeading,
@@ -8,11 +7,11 @@ import {
   StyledPortalBodyContainer,
   StyledLineBreak,
 } from "./styledComponents";
-import { Input, Button } from "../../elements";
+import { Input, Button } from "../../molecules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 
-interface PaymentPortalProps {
+export interface PaymentPortalProps {
   headingText?: string;
   addButtonClick: () => {};
   cancelButtonClick: () => {};

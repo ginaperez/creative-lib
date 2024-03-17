@@ -1,14 +1,19 @@
-import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-import { Button } from '../elements';
+import { Button } from '../molecules';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Elements/Button',
+  title: 'Design System/Components/Button',
   component: Button,
+  tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: `Here we have the Button component coming in 3 variatons: round, text, and square.  Together, these buttons are not just a trio of choices; they're a symphony of user experience enhancements, each contributing its unique purpose to the usability of your UI design.`
+      }
+    },
   }
 } as Meta<typeof Button>;
 

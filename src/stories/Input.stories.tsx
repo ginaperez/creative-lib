@@ -1,12 +1,13 @@
 import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-import { Input } from '../elements';
+import { Input } from '../molecules';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreditCard } from '@fortawesome/free-solid-svg-icons';
 
 export default {
-  title: 'Elements/Inputs',
+  title: 'Design System/Components/Inputs',
   component: Input,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   }

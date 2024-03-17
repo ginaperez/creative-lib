@@ -1,10 +1,11 @@
 import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-import { Toggle } from '../elements/';
+import { Toggle } from '../molecules';
 
 export default {
-  title: 'Elements/Toggle',
+  title: 'Design System/Components/Toggle',
   component: Toggle,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   }

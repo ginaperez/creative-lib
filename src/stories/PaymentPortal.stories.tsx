@@ -1,10 +1,10 @@
-import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
 import { PaymentPortal } from '../prototypes';
 
 export default {
-  title: 'Prototypes/Payment Portal',
+  title: 'Design System/Components/Payment Portal',
   component: PaymentPortal,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   }

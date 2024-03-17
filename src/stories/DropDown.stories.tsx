@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-import { DropDown } from '../elements';
+import { DropDown } from '../molecules';
 
 export default {
-  title: 'Elements/Drop Down',
+  title: 'Design System/Components/Drop Down',
   component: DropDown,
+  tags: ['autodocs'],
 } as Meta<typeof DropDown>;
 
 const Template: StoryFn<typeof DropDown> = (args) => <DropDown { ...args }/>;
@@ -12,23 +12,23 @@ const Template: StoryFn<typeof DropDown> = (args) => <DropDown { ...args }/>;
 export const Default = Template.bind({});
 
 const dropdownOptions = [
-  {value: 'option1', label: 'Option 1'}
+  {value: 'option1', label: 'Option 1'},
+  {value: 'option2', label: 'Option 2'},
+  {value: 'option3', label: 'Option 3'},
+  {value: 'option4', label: 'Option 4'}
 ];
 
 Default.args = {
-    name: 'DropDown',
     label: 'Dropdown Label',
     placeholderText: 'Select',
-    options: dropdownOptions,
+    optionsArray: dropdownOptions,
 };
 
 export const MultipleSelect = Template.bind({});
 
 MultipleSelect.args = {
-    name: 'Mutliple',
     label: 'Multiple Select Label',
-    // placeholderText: 'Select',
-    // options: options,
+    optionsArray: dropdownOptions,
     // value: selectedValue,
     multiple: true,
 };
