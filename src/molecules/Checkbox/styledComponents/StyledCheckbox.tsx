@@ -33,7 +33,7 @@ const checkIcon = keyframes`
   }
 `;
 
-export const StyledCheckbox = styled.input`
+export const StyledCheckbox = styled.input<{ labelColor?: string, boxColor?: string}>`
   height: 0;
   width: 0;
 
@@ -42,7 +42,7 @@ export const StyledCheckbox = styled.input`
     display: flex;
     margin: 0.6em 0;
     align-items: center;
-    color: #9e9e9e;
+    color: ${(props) => props.labelColor ? props.labelColor : "#9e9e9e" };
     transition: color 250ms cubic-bezier(0.4, 0, 0.23, 1);
   }
   & + label > ins {
@@ -70,7 +70,7 @@ export const StyledCheckbox = styled.input`
     width: 1.25rem;
     height: 1.25rem;
     background: transparent;
-    border: 0.15rem solid #9e9e9e;
+    border: 0.15rem solid ${(props) => props.labelColor ? props.labelColor : "#9e9e9e" };
     border-radius: 0.1rem;
     cursor: pointer;
     transition: all 250ms cubic-bezier(0.4, 0, 0.23, 1);
@@ -95,7 +95,7 @@ export const StyledCheckbox = styled.input`
   &:checked + label > span:before {
     content: "";
     position: absolute;
-    top: 0.6rem;
+    top: 0.65rem;
     left: 0.3rem;
     border-right: 0.3rem solid transparent;
     border-bottom: 0.3rem solid transparent;

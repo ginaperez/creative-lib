@@ -5,12 +5,16 @@ export interface CheckboxProps {
   id: string;
   name?: string;
   label?: string;
+  boxColor?: string;
+  labelColor?: string;
 }
 
 export const Checkbox = ({
     id,
     name,
-    label
+    label,
+    boxColor,
+    labelColor
 }: CheckboxProps) => {
   const [ isChecked, setIsChecked ] = useState(false);
 
@@ -26,6 +30,8 @@ export const Checkbox = ({
         name={name}
         checked={isChecked}
         onChange={handleChange}
+        boxColor={boxColor}
+        labelColor={labelColor}
       />
         {label &&
           <label htmlFor={id}>

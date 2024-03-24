@@ -2,7 +2,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { PaymentPortal } from '../prototypes';
 
 export default {
-  title: 'Design System/Components/Payment Portal',
+  title: 'Design System/Prototypes/Payment Portal',
   component: PaymentPortal,
   tags: ['autodocs'],
   parameters: {
