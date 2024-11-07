@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-export const StyledDropdownSelect = styled.select<{
+export interface DropdownSelectProps {
   width?: number;
   multiple?: boolean;
   icon?: string;
-}>`
+  children?: any;
+}
+
+export type StyledDropdownSelectProps = Partial<HTMLSelectElement> & DropdownSelectProps;
+
+export const StyledDropdownSelect = styled.select<StyledDropdownSelectProps>`
   display: flex;
   appearance: none;
   border: 0.1rem solid ${theme("colors.borderGray")};

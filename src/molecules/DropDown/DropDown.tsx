@@ -54,7 +54,7 @@ export const DropDown = ({
       <StyledDropdownSelect
         id={id}
         name={name}
-        placeholder={placeholderText}
+        // placeholder={placeholderText}
         width={width}
         multiple={multiple}
         value={value}
