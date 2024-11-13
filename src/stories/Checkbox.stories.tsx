@@ -2,7 +2,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { Checkbox } from '../molecules';
 
 export default {
-  title: 'Design System/Components/Checkbox',
+  title: 'Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
   parameters: {

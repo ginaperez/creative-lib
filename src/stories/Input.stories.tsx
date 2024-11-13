@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreditCard } from '@fortawesome/free-solid-svg-icons';
 
 export default {
-  title: 'Design System/Components/Inputs',
+  title: 'Inputs',
   component: Input,
   tags: ['autodocs'],
   parameters: {

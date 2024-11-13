@@ -3,7 +3,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { TextArea } from '../molecules';
 
 export default {
-  title: 'Design System/Components/Text Area',
+  title: 'Text Area',
   component: TextArea,
   tags: ['autodocs'],
   parameters: {

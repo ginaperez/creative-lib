@@ -3,7 +3,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { Toggle } from '../molecules';
 
 export default {
-  title: 'Design System/Components/Toggle',
+  title: 'Toggle',
   component: Toggle,
   tags: ['autodocs'],
   parameters: {

@@ -2,7 +2,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { TextCopy } from '../organisms';
 
 export default {
-  title: 'Design System/Components/Text Copy',
+  title: 'Text Copy',
   component: TextCopy,
   parameters: {
     layout: 'centered',

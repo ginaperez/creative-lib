@@ -2,7 +2,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { Modal } from '../organisms';
 
 export default {
-  title: 'Design System/Components/Modal',
+  title: 'Modal',
   component: Modal,
   tags: ['autodocs'],
   parameters: {

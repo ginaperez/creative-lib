@@ -3,7 +3,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { Heading } from '../atoms';
 
 export default {
-  title: 'Design System/Components/Headings',
+  title: 'Headings',
   component: Heading,
   tags: ['autodocs'],
 } as Meta<typeof Heading>;

@@ -21,7 +21,7 @@ const darkModeColors = [
 ]
 
 export default {
-  title: 'Design System/Components/Colors',
+  title: 'Colors',
   component: Colors,
   tags: ['autodocs'],
   parameters: {

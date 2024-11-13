@@ -3,7 +3,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { RadioButton } from '../molecules';
 
 export default {
-  title: 'Design System/Components/Radio Button',
+  title: 'Radio Button',
   component: RadioButton,
   tags: ['autodocs'],
   parameters: {

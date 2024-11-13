@@ -9,7 +9,7 @@ const mockMenu = [
 ];
 
 export default {
-  title: "Design System/Components/Menu",
+  title: "Menu",
   component: Menu,
   tags: ['autodocs'],
 } as Meta<typeof Menu>;

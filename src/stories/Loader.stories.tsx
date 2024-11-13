@@ -2,7 +2,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { Loader } from '../molecules';
 
 export default {
-  title: 'Design System/Components/Loader',
+  title: 'Loader',
   component: Loader,
   tags: ['autodocs'],
   parameters: {

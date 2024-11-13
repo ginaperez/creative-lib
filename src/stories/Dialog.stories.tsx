@@ -3,7 +3,7 @@ import { StoryFn, Meta } from "@storybook/react";
 import { Button } from "../molecules";
 
 export default {
-  title: "Design System/Components/Dialog",
+  title: "Dialog",
   component: Dialog,
   tags: ["autodocs"],
 } as Meta<typeof Dialog>;

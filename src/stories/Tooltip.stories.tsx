@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
 
 export default {
-    title: 'Design System/Components/Tooltip',
+    title: 'Tooltip',
     component: Tooltip,
     parameters: {
       layout: 'centered',

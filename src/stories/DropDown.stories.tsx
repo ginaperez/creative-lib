@@ -2,7 +2,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { DropDown } from '../molecules';
 
 export default {
-  title: 'Design System/Components/Drop Down',
+  title: 'Drop Down',
   component: DropDown,
   tags: ['autodocs'],
 } as Meta<typeof DropDown>;
