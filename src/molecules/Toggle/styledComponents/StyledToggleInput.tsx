@@ -1,7 +1,15 @@
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
-export const StyledToggleInput = styled.input<{ color?: string, square?: boolean }>`
+export interface ToggleInputComponentProps {
+    color?: string;
+    square?: boolean;
+    children?: any;
+}
+
+export type StyledToggleInputProps = Partial<HTMLInputElement> & ToggleInputComponentProps;
+
+export const StyledToggleInput = styled.input<StyledToggleInputProps>`
     opacity: 0;
     width: 0;
     height: 0;
@@ -14,4 +22,4 @@ export const StyledToggleInput = styled.input<{ color?: string, square?: boolean
     &:checked + span:before {
         transform: ${(props) => props.square ? 'translateX(1.6rem)' : 'translateX(1.4rem)'};
     }
-`
+`;

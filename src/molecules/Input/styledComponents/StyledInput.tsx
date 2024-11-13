@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
-export const StyledInput = styled.input`
+export interface InputComponentProps {
+    children?: any;
+}
+
+export type StyledInputProps = Partial<HTMLInputElement> & InputComponentProps;
+
+export const StyledInput = styled.input<StyledInputProps>`
     display: flex;
     border: none;
     height: 100%;
@@ -13,4 +19,4 @@ export const StyledInput = styled.input`
     &:disabled {
         cursor: not-allowed;
     }
-`
+`;

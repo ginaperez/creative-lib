@@ -1,7 +1,13 @@
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-export const StyledMenuItem = styled.div`
+export interface MenuItemComponentProps {
+    children?: any;
+}
+
+export type StyledMenuItemProps = Partial<HTMLDivElement> & MenuItemComponentProps;
+
+export const StyledMenuItem = styled.div<StyledMenuItemProps>`
     cursor: default;
     display: flex;
     justify-content: baseline;

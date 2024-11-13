@@ -1,12 +1,15 @@
 import styled, { css, keyframes } from "styled-components";
 import { theme } from "styled-tools";
 
-export interface StyledLoaderProps {
+export interface LoaderComponentProps {
   color?: string;
   circle?: boolean;
   bar?: boolean;
   loadingSpeed?: number;
+  children?: any;
 }
+
+export type StyledLoaderProps = Partial<HTMLDivElement> & LoaderComponentProps;
 
 const rotate = keyframes`
       100% {

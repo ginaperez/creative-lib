@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
-export const StyledTextAreaContainer = styled.div`
+export interface TextAreaContainerProps {
+    children?: any;
+}
+
+export type StyledTextAreaContainerProps = Partial<HTMLDivElement> & TextAreaContainerProps;
+
+export const StyledTextAreaContainer = styled.div<StyledTextAreaContainerProps>`
     display: flex;
     flex-direction: column;
-`
+`;

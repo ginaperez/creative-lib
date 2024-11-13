@@ -1,7 +1,15 @@
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-export const StyledToggleSlider = styled.span<{ transition?: number, square?: boolean }>`
+export interface ToggleSliderComponentProps {
+  transition?: number;
+  square?: boolean;
+  children?: any;
+}
+
+export type StyledToggleSliderProps = Partial<HTMLSpanElement> & ToggleSliderComponentProps;
+
+export const StyledToggleSlider = styled.span<StyledToggleSliderProps>`
   position: absolute;
   cursor: pointer;
   top: 0;

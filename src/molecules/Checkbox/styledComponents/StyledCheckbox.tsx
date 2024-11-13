@@ -1,15 +1,21 @@
 import styled, { keyframes } from "styled-components";
 import { theme } from "styled-tools";
 
+export interface CheckboxProps {
+  children?: any;
+}
+
+export type StyledCheckboxProps = Partial<HTMLInputElement> & CheckboxProps;
+
 const checkBounce = keyframes`
   0%{
     transform: scale(1);
   }
-  33%{    
+  33%{
     transform: scale(.85);
   }
   100%{
-    transform: scale(1);    
+    transform: scale(1);
   }
 `;
 
@@ -25,15 +31,15 @@ const checkIcon = keyframes`
     height: 0;
     transform: translate3d(0,0,0) rotate(45deg);
   }
-  100%{    
+  100%{
     width: .2em;
-    height: .5em;    
+    height: .5em;
     border-color: #fff;
     transform: translate3d(-.1em,-.65em,0) rotate(45deg);
   }
 `;
 
-export const StyledCheckbox = styled.input`
+export const StyledCheckbox = styled.input<StyledCheckboxProps>`
   height: 0;
   width: 0;
 

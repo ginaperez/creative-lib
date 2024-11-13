@@ -7,4 +7,4 @@ export const StyledDropdownIcon = styled(FontAwesomeIcon)`
     left: 100px;
     background-color: green;
     z-index: 9999;
-`
+`;

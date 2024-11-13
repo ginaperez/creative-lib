@@ -9,7 +9,7 @@ export interface ButtonProps {
   type?: ButtonVariant;
 }
 
-export const Button = ({ 
+export const Button = ({
     children,
     onClick,
     type,
@@ -17,7 +17,7 @@ export const Button = ({
     const text = type === 'text';
     const square = type === 'square';
     return (
-        <StyledButton 
+        <StyledButton
             onClick={onClick}
             text={text}
             square={square}

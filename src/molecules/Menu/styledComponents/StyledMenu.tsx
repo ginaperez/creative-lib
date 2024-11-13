@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
-export const StyledMenu = styled.div`
+export interface MenuComponentProps {
+    children?: any;
+}
+
+export type StyledMenuProps = Partial<HTMLDivElement> & MenuComponentProps;
+
+export const StyledMenu = styled.div<StyledMenuProps>`
     display: flex;
     align-items: center;
     flex-direction: column;

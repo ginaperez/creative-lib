@@ -1,7 +1,13 @@
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-export const StyledDropdownLabel = styled.label`
+export interface DropdownLabelProps {
+  children?: any;
+}
+
+export type StyledDropdownLabelProps = Partial<HTMLLabelElement> & DropdownLabelProps;
+
+export const StyledDropdownLabel = styled.label<StyledDropdownLabelProps>`
   display: flex;
   font-family: ${theme("fonts.nunito")};
   font-size: 0.8rem;

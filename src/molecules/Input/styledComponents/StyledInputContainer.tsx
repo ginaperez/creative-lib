@@ -1,7 +1,14 @@
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-export const StyledInputContainer = styled.div<{ width?: string }>`
+export interface InputContainerProps {
+  width?: string
+  children?: any;
+}
+
+export type StyledInputContainerProps = Partial<HTMLDivElement> & InputContainerProps;
+
+export const StyledInputContainer = styled.div<StyledInputContainerProps>`
   display: flex;
   flex-direction: row;
   align-items: center;

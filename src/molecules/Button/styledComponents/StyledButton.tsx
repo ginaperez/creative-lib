@@ -1,10 +1,15 @@
 import styled, { css } from "styled-components";
 import { theme } from "styled-tools";
 
-export const StyledButton = styled.button<{
+export interface ButtonProps {
   text?: boolean;
   square?: boolean;
-}>`
+  children?: any;
+}
+
+export type StyledButtonProps = Partial<HTMLButtonElement> & ButtonProps;
+
+export const StyledButton = styled.button<StyledButtonProps>`
   // default button styling
   display: flex;
   align-items: center;

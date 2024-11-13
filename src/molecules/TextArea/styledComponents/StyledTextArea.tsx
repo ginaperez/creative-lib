@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
-export const StyledTextArea = styled.textarea`
+export interface TextAreaComponentProps {
+    children?: any;
+}
+
+export type StyledTextAreaProps = Partial<HTMLTextAreaElement> & TextAreaComponentProps;
+
+export const StyledTextArea = styled.textarea<StyledTextAreaProps>`
     display: flex;
     justify-content: center;
     font-family: ${theme("fonts.nunito")};
@@ -12,4 +18,4 @@ export const StyledTextArea = styled.textarea`
     width: 20rem;
     height: 5rem;
     color: ${theme("colors.softBlack")};
-`
+`;

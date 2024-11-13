@@ -33,7 +33,7 @@ export const Input = ({
   return (
     <StyledInputLabelContainer>
       {
-        labelText && <StyledInputLabel htmlFor={id}>{labelText}</StyledInputLabel> 
+        labelText && <StyledInputLabel htmlFor={id}>{labelText}</StyledInputLabel>
       }
       <StyledInputContainer width={width}>
         {configuredIcon}
