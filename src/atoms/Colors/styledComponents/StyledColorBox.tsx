@@ -1,7 +1,15 @@
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
-export const StyledColorBox = styled.span<{ backgroundColor: string, textColor: string }>`
+export interface ColorBoxProps {
+    backgroundColor: string;
+    textColor: string;
+    children?: any;
+}
+
+export type StyledColorBoxProps = Partial<HTMLSpanElement> & ColorBoxProps;
+
+export const StyledColorBox = styled.span<StyledColorBoxProps>`
     font-family: ${theme('fonts.nunito')};
     display: flex;
     align-items: center;

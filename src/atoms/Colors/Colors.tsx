@@ -20,14 +20,14 @@ export interface ColorsProps {
 
 export const Colors = ({
   colors,
-  heading 
+  heading
 }: ColorsProps) => {
   return (
     <>
       <StyledColorsHeading>{heading}</StyledColorsHeading>
       <StyledColorsBoxContainer>
         {colors.map((color) => (
-            <>
+          <>
             <StyledColorBox backgroundColor={color.hex} textColor={color.textColor}>
               <StyledColorsLabelContainer>
                 <StyledColorsLabel>{color.name}</StyledColorsLabel>
