@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
-export const StyledModalContainer = styled.div`
+export interface ModalContaineProps {
+    children?: any;
+}
+
+export type StyledModalContaineProps = Partial<HTMLDivElement> & ModalContaineProps;
+
+export const StyledModalContainer = styled.div<StyledModalContaineProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,4 +21,4 @@ export const StyledModalContainer = styled.div`
     box-shadow: 0 0 0 50vmax rgba(0,0,0,.5);
     border-radius: 0.4rem;
     padding: 0 3rem 0 3rem;
-`
+`;

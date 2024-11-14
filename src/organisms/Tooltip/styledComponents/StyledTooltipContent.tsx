@@ -1,12 +1,18 @@
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-export const StyledTooltipContent = styled.div<{
+
+export interface TooltipContentProps {
   top: string;
   right: string;
   left: string;
   bottom: string;
-}>`
+  children?: any;
+}
+
+export type StyledTooltipContentProps = Partial<HTMLDivElement> & TooltipContentProps;
+
+export const StyledTooltipContent = styled.div<StyledTooltipContentProps>`
   position: absolute;
   display: flex;
   align-items: center;

@@ -1,9 +1,14 @@
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-export const StyledCopyText = styled.div<{
-    width?: number
-}>`
+export interface CopyTextProps {
+    width?: number;
+    children?: any;
+}
+
+export type StyledCopyTextProps = Partial<HTMLDivElement> & CopyTextProps;
+
+export const StyledCopyText = styled.div<StyledCopyTextProps>`
     display: flex;
     border: solid 0.1rem ${theme("colors.borderGray")};
     color: ${theme('colors.softBlack')};
@@ -15,4 +20,4 @@ export const StyledCopyText = styled.div<{
     overflow: scroll;
     font-size: 13px;
     font-family: ${theme('fonts.fira')};
-`
+`;

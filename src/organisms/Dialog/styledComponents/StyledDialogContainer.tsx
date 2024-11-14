@@ -1,7 +1,13 @@
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-export const StyledDialogContainer = styled.div`
+export interface DialogContainerProps {
+  children?: any;
+}
+
+export type StyledDialogContainerProps = Partial<HTMLDivElement> & DialogContainerProps;
+
+export const StyledDialogContainer = styled.div<StyledDialogContainerProps>`
   font-family: ${theme('fonts.nunito')};
   display: flex;
   flex-direction: column;

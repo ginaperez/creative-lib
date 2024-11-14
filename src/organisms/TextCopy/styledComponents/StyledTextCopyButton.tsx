@@ -1,7 +1,13 @@
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-export const StyledTextCopyButton = styled.button`
+export interface TextCopyButtonProps {
+    children?: any;
+}
+
+export type StyledTextCopyButtonProps = Partial<HTMLButtonElement> & TextCopyButtonProps;
+
+export const StyledTextCopyButton = styled.button<StyledTextCopyButtonProps>`
     cursor: pointer;
     display: flex;
     align-items: center;

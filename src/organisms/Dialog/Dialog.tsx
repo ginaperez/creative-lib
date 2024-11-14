@@ -11,7 +11,7 @@ export const Dialog = ({
     headerText,
     footerContent
 }: DialogProps) => {
-  
+
   return (
     <StyledDialogContainer>
       {/* {

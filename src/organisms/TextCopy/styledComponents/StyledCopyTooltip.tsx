@@ -1,12 +1,17 @@
 import styled from "styled-components";
 import { theme } from "styled-tools";
 
-export const StyledCopyTooltip = styled.div<{
+export interface CopyTextComponentProps {
     top: string;
     right: string;
     left: string;
     bottom: string;
-}>`
+    children?: any;
+}
+
+export type StyledCopyTextComponentProps = Partial<HTMLDivElement> & CopyTextComponentProps;
+
+export const StyledCopyTooltip = styled.div<StyledCopyTextComponentProps>`
     font-family: ${theme('fonts.nunito')};
     position: absolute;
     display: flex;
@@ -25,4 +30,4 @@ export const StyledCopyTooltip = styled.div<{
     border-radius: 4px;
     white-space: nowrap;
     z-index: 1;
-`
+`;
