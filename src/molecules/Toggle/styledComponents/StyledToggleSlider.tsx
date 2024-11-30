@@ -1,13 +1,13 @@
-import styled from "styled-components";
-import { theme } from "styled-tools";
+import styled from 'styled-components'
+import { theme } from 'styled-tools'
 
 export interface ToggleSliderComponentProps {
-  transition?: number;
-  square?: boolean;
-  children?: any;
+  transition?: number
+  square?: boolean
+  children?: any
 }
 
-export type StyledToggleSliderProps = Partial<HTMLSpanElement> & ToggleSliderComponentProps;
+export type StyledToggleSliderProps = Partial<HTMLSpanElement> & ToggleSliderComponentProps
 
 export const StyledToggleSlider = styled.span<StyledToggleSliderProps>`
   position: absolute;
@@ -16,18 +16,18 @@ export const StyledToggleSlider = styled.span<StyledToggleSliderProps>`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${theme("colors.borderGray")};
+  background-color: ${theme('colors.borderGray')};
   transition: ${(props) => props.transition || 0.4}s;
-  border-radius: ${(props) => props.square ? 0 : 3.4}rem;
+  border-radius: ${(props) => (props.square ? 0 : 3.4)}rem;
   &:before {
     position: absolute;
-    content: "";
-    height: ${(props) => props.square ? 1.9 : 1.7}rem;
+    content: '';
+    height: ${(props) => (props.square ? 1.9 : 1.7)}rem;
     width: 1.7rem;
-    left: ${(props) => props.square ? 0.1 : 0.2}rem;
-    bottom: ${(props) => props.square ? 0.1 : 0.2}rem;
-    background-color: ${theme("colors.white")};
+    left: ${(props) => (props.square ? 0.1 : 0.2)}rem;
+    bottom: ${(props) => (props.square ? 0.1 : 0.2)}rem;
+    background-color: ${theme('colors.white')};
     transition: ${(props) => props.transition || 0.4}s;
-    border-radius: ${(props) => props.square ? 0 : '50%'};
+    border-radius: ${(props) => (props.square ? 0 : '50%')};
   }
-`;
+`

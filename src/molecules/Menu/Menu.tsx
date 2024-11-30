@@ -1,23 +1,21 @@
-import { StyledMenu, StyledMenuItem } from './styledComponents';
+import { StyledMenu, StyledMenuItem } from './styledComponents'
 
-export interface Menu {
-    menuItem: string;
-};
+export interface MenuItem {
+  menuItem: string
+}
 
 export interface MenuProps {
-    menu: Menu[];
-};
+  menu: MenuItem[]
+}
 
-export const Menu = ({
-    menu,
-}: MenuProps) => {
-    return (
-        <StyledMenu>
-            {menu.map((menuOption) => (
-                <StyledMenuItem>{menuOption.menuItem}</StyledMenuItem>
-            ))}
-        </StyledMenu>
-    );
-};
+export const Menu = ({ menu }: MenuProps) => {
+  return (
+    <StyledMenu>
+      {menu.map((menuOption) => (
+        <StyledMenuItem>{menuOption.menuItem}</StyledMenuItem>
+      ))}
+    </StyledMenu>
+  )
+}
 
-export default Menu;
+export default Menu

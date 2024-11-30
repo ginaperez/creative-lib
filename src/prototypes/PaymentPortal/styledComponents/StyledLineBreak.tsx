@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { theme } from 'styled-tools';
+import styled from 'styled-components'
+import { theme } from 'styled-tools'
 
 export const StyledLineBreak = styled.hr<Partial<HTMLHRElement>>`
-    display: flex;
-    color: ${theme('colors.borderGray')};
-    width: 29rem;
-`;
+  display: flex;
+  color: ${theme('colors.borderGray')};
+  width: 29rem;
+`

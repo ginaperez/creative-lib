@@ -1,13 +1,13 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export interface ColorsLabelContainerProps {
-    children?: any;
+  children?: any
 }
 
-export type StyledColorsLabelContainerProps = Partial<HTMLDivElement> & ColorsLabelContainerProps;
+export type StyledColorsLabelContainerProps = Partial<HTMLDivElement> & ColorsLabelContainerProps
 
 export const StyledColorsLabelContainer = styled.div<StyledColorsLabelContainerProps>`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `

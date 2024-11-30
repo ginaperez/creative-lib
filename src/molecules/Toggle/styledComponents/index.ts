@@ -1,3 +1,3 @@
-export * from './StyledToggleLabel';
-export * from './StyledToggleInput';
-export * from './StyledToggleSlider';
+export * from './StyledToggleLabel'
+export * from './StyledToggleInput'
+export * from './StyledToggleSlider'

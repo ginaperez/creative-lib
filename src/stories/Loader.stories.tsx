@@ -1,5 +1,5 @@
-import { StoryFn, Meta } from '@storybook/react';
-import { Loader } from '../molecules';
+import { StoryFn, Meta } from '@storybook/react'
+import { Loader } from '../molecules'
 
 export default {
   title: 'Loader',
@@ -7,23 +7,23 @@ export default {
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
-  }
-} as Meta<typeof Loader>;
+  },
+} as Meta<typeof Loader>
 
-const LoaderStory: StoryFn<typeof Loader> = (args) => <Loader { ...args }/>;
+const LoaderStory: StoryFn<typeof Loader> = (args) => <Loader {...args} />
 
-export const Default = LoaderStory.bind({});
+export const Default = LoaderStory.bind({})
 Default.args = {
-    variant: 'circle',
-};
+  variant: 'circle',
+}
 
-export const CustomColor = LoaderStory.bind({});
+export const CustomColor = LoaderStory.bind({})
 CustomColor.args = {
-    variant: 'circle',
-    color: `#D1D6EE`,
-};
+  variant: 'circle',
+  color: `#D1D6EE`,
+}
 
-export const BarLoader = LoaderStory.bind({});
+export const BarLoader = LoaderStory.bind({})
 BarLoader.args = {
-    variant: "bar",
+  variant: 'bar',
 }

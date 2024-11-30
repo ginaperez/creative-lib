@@ -1,1 +1,1 @@
-export * from './StyledHeadingContainer';
+export * from './StyledHeadingContainer'

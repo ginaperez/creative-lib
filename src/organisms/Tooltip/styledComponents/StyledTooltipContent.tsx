@@ -1,16 +1,15 @@
-import styled from "styled-components";
-import { theme } from "styled-tools";
-
+import styled from 'styled-components'
+import { theme } from 'styled-tools'
 
 export interface TooltipContentProps {
-  top: string;
-  right: string;
-  left: string;
-  bottom: string;
-  children?: any;
+  top: string
+  right: string
+  left: string
+  bottom: string
+  children?: any
 }
 
-export type StyledTooltipContentProps = Partial<HTMLDivElement> & TooltipContentProps;
+export type StyledTooltipContentProps = Partial<HTMLDivElement> & TooltipContentProps
 
 export const StyledTooltipContent = styled.div<StyledTooltipContentProps>`
   position: absolute;
@@ -28,9 +27,10 @@ export const StyledTooltipContent = styled.div<StyledTooltipContentProps>`
   margin: 0 0 0 1rem;
   width: 15rem;
   height: fit-content;
-  color: ${theme("colors.softBlack")};
-  background-color: ${theme("colors.white")};
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+  color: ${theme('colors.softBlack')};
+  background-color: ${theme('colors.white')};
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   pointer-events: none;
-`;
+`

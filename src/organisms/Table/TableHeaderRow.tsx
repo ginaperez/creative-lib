@@ -1,5 +1,3 @@
 export const TableHeaderRow = () => {
-    return (
-        <div></div>
-    )
+  return <div></div>
 }

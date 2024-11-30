@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import { theme } from "styled-tools";
+import styled from 'styled-components'
+import { theme } from 'styled-tools'
 
 export interface DialogContainerProps {
-  children?: any;
+  children?: any
 }
 
-export type StyledDialogContainerProps = Partial<HTMLDivElement> & DialogContainerProps;
+export type StyledDialogContainerProps = Partial<HTMLDivElement> & DialogContainerProps
 
 export const StyledDialogContainer = styled.div<StyledDialogContainerProps>`
   font-family: ${theme('fonts.nunito')};
@@ -16,4 +16,4 @@ export const StyledDialogContainer = styled.div<StyledDialogContainerProps>`
   width: fit-content;
   border: 0.1rem solid ${theme('colors.borderGray')};
   border-radius: 0.4rem;
-`;
+`

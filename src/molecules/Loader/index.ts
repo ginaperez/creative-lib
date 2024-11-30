@@ -1,2 +1,2 @@
-export * from './styledComponents';
-export * from './Loader';
+export * from './styledComponents'
+export * from './Loader'

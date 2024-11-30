@@ -1,2 +1,2 @@
-export * from './Table';
-export * from './styledComponents';
+export * from './Table'
+export * from './styledComponents'

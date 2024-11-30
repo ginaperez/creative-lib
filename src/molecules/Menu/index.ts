@@ -1,2 +1,2 @@
-export * from './Menu';
-export * from './styledComponents';
+export * from './Menu'
+export * from './styledComponents'

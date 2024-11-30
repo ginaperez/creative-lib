@@ -1,2 +1,2 @@
-export * from './DropDown';
-export * from './styledComponents';
+export * from './DropDown'
+export * from './styledComponents'

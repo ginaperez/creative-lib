@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export interface DropdownOptionProps {
-    children?: any;
+  children?: any
 }
 
-export type StyledDropdownOptionProps = Partial<HTMLOptionElement> & DropdownOptionProps;
+export type StyledDropdownOptionProps = Partial<HTMLOptionElement> & DropdownOptionProps
 
 export const StyledDropdownOption = styled.option<StyledDropdownOptionProps>`
-    display: flex;
-`;
+  display: flex;
+`

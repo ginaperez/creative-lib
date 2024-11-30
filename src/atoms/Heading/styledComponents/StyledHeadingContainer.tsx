@@ -1,12 +1,12 @@
-import styled from 'styled-components';
-import { theme } from 'styled-tools';
+import styled from 'styled-components'
+import { theme } from 'styled-tools'
 
 export interface HeadingContainerProps {
-    children?: any;
+  children?: any
 }
 
-export type StyledHeadingContainerProps = Partial<HTMLDivElement> & HeadingContainerProps;
+export type StyledHeadingContainerProps = Partial<HTMLDivElement> & HeadingContainerProps
 
 export const StyledHeadingContainer = styled.div<StyledHeadingContainerProps>`
-    font-family: ${theme('fonts.nunito')};
+  font-family: ${theme('fonts.nunito')};
 `

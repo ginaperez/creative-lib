@@ -1,2 +1,2 @@
-export * from './Dialog';
-export * from './styledComponents';
+export * from './Dialog'
+export * from './styledComponents'

@@ -39,7 +39,9 @@
     "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build -s public",
     "publish-dry-run": "cd dist && npm publish --dry-run --access public ./",
-    "publish-real": "cd dist && npm publish --access public ./"
+    "publish-real": "cd dist && npm publish --access public ./",
+    "lint": "eslint src/",
+    "format": "prettier --write src/"
   },
   "eslintConfig": {
     "extends": [
@@ -94,8 +96,17 @@
     "@types/react-dom": "^18.2.7",
     "@types/styled-components": "^5.1.26",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "prettier": "^3.4.1",
     "prop-types": "^15.8.1",
     "storybook": "^7.6.6",
     "webpack": "^5.75.0"
-  }
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 100
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

@@ -1,23 +1,23 @@
-import { StoryFn, Meta } from '@storybook/react';
-import { Colors } from '../atoms';
+import { StoryFn, Meta } from '@storybook/react'
+import { Colors } from '../atoms'
 
 const primaryColors = [
-  {name: "Primary", hex: "#146C94", textColor: "#FFFFFF"},
-  {name: "Secondary", hex: "#19A7CE", textColor: "#000000"},
-  {name: "Border", hex: "#E0E3E7", textColor: "#000000"},
-];
+  { name: 'Primary', hex: '#146C94', textColor: '#FFFFFF' },
+  { name: 'Secondary', hex: '#19A7CE', textColor: '#000000' },
+  { name: 'Border', hex: '#E0E3E7', textColor: '#000000' },
+]
 
 const actionColors = [
-  {name: "Success", hex: "#4CAF50", textColor: "#FFFFFF"},
-  {name: "Warning", hex: "#FF9800", textColor: "#000000"},
-  {name: "Error", hex: "#F44336", textColor: "#000000"},
-  {name: "Disabled", hex: "#939393", textColor: "#FFFFFF"},
-];
+  { name: 'Success', hex: '#4CAF50', textColor: '#FFFFFF' },
+  { name: 'Warning', hex: '#FF9800', textColor: '#000000' },
+  { name: 'Error', hex: '#F44336', textColor: '#000000' },
+  { name: 'Disabled', hex: '#939393', textColor: '#FFFFFF' },
+]
 
 const darkModeColors = [
-  {name: "Primary", hex: "#2F80ED", textColor: "#FFFFFF"},
-  {name: "Secondary", hex: "#BB86FC", textColor: "#FFFFFF"},
-  {name: "Accent", hex: "#9C27B0", textColor: "#FFFFFF"},
+  { name: 'Primary', hex: '#2F80ED', textColor: '#FFFFFF' },
+  { name: 'Secondary', hex: '#BB86FC', textColor: '#FFFFFF' },
+  { name: 'Accent', hex: '#9C27B0', textColor: '#FFFFFF' },
 ]
 
 export default {
@@ -26,28 +26,28 @@ export default {
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
-  }
-} as Meta<typeof Colors>;
+  },
+} as Meta<typeof Colors>
 
-const Template: StoryFn<typeof Colors> = (args) => <Colors { ...args }/>;
+const Template: StoryFn<typeof Colors> = (args) => <Colors {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 
 Default.args = {
-    colors: primaryColors,
-    heading: 'Default'
-};
+  colors: primaryColors,
+  heading: 'Default',
+}
 
-export const Action = Template.bind({});
+export const Action = Template.bind({})
 
 Action.args = {
   colors: actionColors,
-  heading: 'Action'
-};
+  heading: 'Action',
+}
 
-export const DarkMode = Template.bind({});
+export const DarkMode = Template.bind({})
 
 DarkMode.args = {
   colors: darkModeColors,
-  heading: 'Dark Mode'
+  heading: 'Dark Mode',
 }

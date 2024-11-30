@@ -1,1 +1,1 @@
-export * from './TextCopy';
+export * from './TextCopy'

@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export interface TextAreaLabelProps {
-    children?: any;
+  children?: any
 }
 
-export type StyledTextAreaLabelProps = Partial<HTMLLabelElement> & TextAreaLabelProps;
+export type StyledTextAreaLabelProps = Partial<HTMLLabelElement> & TextAreaLabelProps
 
 export const StyledTextAreaLabel = styled.label`
-    display: flex;
-`;
+  display: flex;
+`

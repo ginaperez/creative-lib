@@ -1,2 +1,2 @@
-export * from './StyledTextArea';
-export * from './StyledTextAreaContainer';
+export * from './StyledTextArea'
+export * from './StyledTextAreaContainer'

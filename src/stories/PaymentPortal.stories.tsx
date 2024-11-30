@@ -1,5 +1,5 @@
-import { StoryFn, Meta } from '@storybook/react';
-import { PaymentPortal } from '../prototypes';
+import { StoryFn, Meta } from '@storybook/react'
+import { PaymentPortal } from '../prototypes'
 
 export default {
   title: 'Payment Portal',
@@ -7,13 +7,13 @@ export default {
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
-  }
-} as Meta<typeof PaymentPortal>;
+  },
+} as Meta<typeof PaymentPortal>
 
-const Template: StoryFn<typeof PaymentPortal> = (args) => <PaymentPortal { ...args }/>;
+const Template: StoryFn<typeof PaymentPortal> = (args) => <PaymentPortal {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 
 Default.args = {
-    headingText: 'Add a new card'
-};
+  headingText: 'Add a new card',
+}

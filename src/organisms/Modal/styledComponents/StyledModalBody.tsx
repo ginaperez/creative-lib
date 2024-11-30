@@ -1,12 +1,12 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export interface ModalBodyProps {
-    children?: any;
+  children?: any
 }
 
-export type StyledModalBodyProps = Partial<HTMLParagraphElement> & ModalBodyProps;
+export type StyledModalBodyProps = Partial<HTMLParagraphElement> & ModalBodyProps
 
 export const StyledModalBody = styled.p<StyledModalBodyProps>`
-    display: flex;
-    text-align: left;
-`;
+  display: flex;
+  text-align: left;
+`

@@ -1,11 +1,11 @@
-import styled, { keyframes } from "styled-components";
-import { theme } from "styled-tools";
+import styled, { keyframes } from 'styled-components'
+import { theme } from 'styled-tools'
 
 export interface CheckboxProps {
-  children?: any;
+  children?: any
 }
 
-export type StyledCheckboxProps = Partial<HTMLInputElement> & CheckboxProps;
+export type StyledCheckboxProps = Partial<HTMLInputElement> & CheckboxProps
 
 const checkBounce = keyframes`
   0%{
@@ -17,7 +17,7 @@ const checkBounce = keyframes`
   100%{
     transform: scale(1);
   }
-`;
+`
 
 const checkIcon = keyframes`
   0%{
@@ -37,7 +37,7 @@ const checkIcon = keyframes`
     border-color: #fff;
     transform: translate3d(-.1em,-.65em,0) rotate(45deg);
   }
-`;
+`
 
 export const StyledCheckbox = styled.input<StyledCheckboxProps>`
   height: 0;
@@ -84,7 +84,7 @@ export const StyledCheckbox = styled.input<StyledCheckboxProps>`
 
   & + label:hover,
   &:focus + label {
-    color: ${theme("colors.darkBlue")};
+    color: ${theme('colors.darkBlue')};
   }
   & + label:hover > span,
   &:focus + label > span {
@@ -95,11 +95,11 @@ export const StyledCheckbox = styled.input<StyledCheckboxProps>`
   }
 
   &:checked + label > span {
-    border: 0.65rem solid ${theme("colors.mediumBlue")};
+    border: 0.65rem solid ${theme('colors.mediumBlue')};
     animation: ${checkBounce} 200ms cubic-bezier(0.4, 0, 0.23, 1);
   }
   &:checked + label > span:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0.6rem;
     left: 0.3rem;
@@ -107,13 +107,12 @@ export const StyledCheckbox = styled.input<StyledCheckboxProps>`
     border-bottom: 0.3rem solid transparent;
     transform: rotate(45deg);
     transform-origin: 0% 100%;
-    animation: ${checkIcon} 125ms 250ms cubic-bezier(0.4, 0, 0.23, 1)
-      forwards;
+    animation: ${checkIcon} 125ms 250ms cubic-bezier(0.4, 0, 0.23, 1) forwards;
   }
-`;
+`
 
 export const GlobalStyles = styled.div`
-  font-family: ${theme("fonts.nunito")};
+  font-family: ${theme('fonts.nunito')};
 
   * {
     box-sizing: border-box;
@@ -124,4 +123,4 @@ export const GlobalStyles = styled.div`
     margin: 0;
     height: 100%;
   }
-`;
+`

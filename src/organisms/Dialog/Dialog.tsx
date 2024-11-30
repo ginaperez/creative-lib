@@ -1,17 +1,12 @@
-import { StyledDialogContainer, StyledDialogContent, StyledDialogFooter } from "./styledComponents";
+import { StyledDialogContainer, StyledDialogContent, StyledDialogFooter } from './styledComponents'
 
 export interface DialogProps {
-  bodyContent?: string;
-  headerText?: string;
-  footerContent?: string | JSX.Element;
+  bodyContent?: string
+  headerText?: string
+  footerContent?: string | JSX.Element
 }
 
-export const Dialog = ({
-    bodyContent,
-    headerText,
-    footerContent
-}: DialogProps) => {
-
+export const Dialog = ({ bodyContent, headerText, footerContent }: DialogProps) => {
   return (
     <StyledDialogContainer>
       {/* {
@@ -21,18 +16,10 @@ export const Dialog = ({
           </StyledDialogHeader>
         )
       } */}
-      <StyledDialogContent>
-        {bodyContent}
-      </StyledDialogContent>
-      {
-        footerContent && (
-          <StyledDialogFooter>
-            {footerContent}
-          </StyledDialogFooter>
-        )
-      }
+      <StyledDialogContent>{bodyContent}</StyledDialogContent>
+      {footerContent && <StyledDialogFooter>{footerContent}</StyledDialogFooter>}
     </StyledDialogContainer>
-  );
-};
+  )
+}
 
-export default Dialog;
+export default Dialog

@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export interface TopInputsProps {
-    children?: any;
+  children?: any
 }
 
-export type StyledTopInputsProps = Partial<HTMLDivElement> & TopInputsProps;
+export type StyledTopInputsProps = Partial<HTMLDivElement> & TopInputsProps
 
 export const StyledTopInputs = styled.div<StyledTopInputsProps>`
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-`;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+`

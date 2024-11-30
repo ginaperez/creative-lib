@@ -1,2 +1,2 @@
-export * from './PaymentPortal';
-export * from './styledComponents';
+export * from './PaymentPortal'
+export * from './styledComponents'

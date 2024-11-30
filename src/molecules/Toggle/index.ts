@@ -1,2 +1,2 @@
-export * from './Toggle';
-export * from './styledComponents';
+export * from './Toggle'
+export * from './styledComponents'

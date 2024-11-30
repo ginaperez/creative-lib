@@ -1,12 +1,8 @@
-import {
-  StyledDropdownLabel,
-  StyledDropdownOption,
-  StyledDropdownSelect,
-} from "./styledComponents";
+import { StyledDropdownLabel, StyledDropdownOption, StyledDropdownSelect } from './styledComponents'
 
 export interface OptionType {
-  value: string;
-  label: string;
+  value: string
+  label: string
 }
 
 export interface DropDownProps {
@@ -14,25 +10,25 @@ export interface DropDownProps {
    * Use optionsArray when mapping
    * dropdown options from an array
    */
-  optionsArray?: OptionType[];
-  value?: string;
-  id?: string;
-  name?: string;
-  placeholderText: string;
-  label?: string;
+  optionsArray?: OptionType[]
+  value?: string
+  id?: string
+  name?: string
+  placeholderText?: string
+  label?: string
   /**
    * Sets the width using a number
    * with rem. Default width is 10rem
    */
-  width?: number;
-  multiple?: boolean;
-  autoFocus?: boolean;
-  disabled?: boolean;
-  type?: string;
-  size?: number;
-  length?: number;
-  selectedIndex?: number;
-  icon?: string;
+  width?: number
+  multiple?: boolean
+  autoFocus?: boolean
+  disabled?: boolean
+  type?: string
+  size?: number
+  length?: number
+  selectedIndex?: number
+  icon?: string
 }
 
 export const DropDown = ({
@@ -62,16 +58,13 @@ export const DropDown = ({
         size={size}
         icon={icon}
       >
-        {
-          optionsArray && (optionsArray.map((option) => (
-            <StyledDropdownOption value={option.value}>
-              {option.label}
-            </StyledDropdownOption>
-          )))
-        }
+        {optionsArray &&
+          optionsArray.map((option) => (
+            <StyledDropdownOption value={option.value}>{option.label}</StyledDropdownOption>
+          ))}
       </StyledDropdownSelect>
     </>
-  );
-};
+  )
+}
 
-export default DropDown;
+export default DropDown

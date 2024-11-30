@@ -1,6 +1,6 @@
-import React from 'react';
-import { StoryFn, Meta } from '@storybook/react';
-import { RadioButton } from '../molecules';
+import React from 'react'
+import { StoryFn, Meta } from '@storybook/react'
+import { RadioButton } from '../molecules'
 
 export default {
   title: 'Radio Button',
@@ -8,21 +8,21 @@ export default {
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
-  }
-} as Meta<typeof RadioButton>;
+  },
+} as Meta<typeof RadioButton>
 
-const Template: StoryFn<typeof RadioButton> = (args) => <RadioButton { ...args }/>;
+const Template: StoryFn<typeof RadioButton> = (args) => <RadioButton {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 
 Default.args = {
-    name: 'RadioButton',
-    speed: 0.4
-};
+  name: 'RadioButton',
+  speed: 0.4,
+}
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({})
 
 Disabled.args = {
-    name: 'RadioButton',
-    disabled: true,
-};
+  name: 'RadioButton',
+  disabled: true,
+}

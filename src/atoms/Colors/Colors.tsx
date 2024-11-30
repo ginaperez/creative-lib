@@ -4,24 +4,21 @@ import {
   StyledColorsHeading,
   StyledColorsLabel,
   StyledColorsLabelContainer,
-} from "./styledComponents";
+} from './styledComponents'
 
 export interface Color {
-  name: string;
-  hex: string;
-  textColor: string;
-  heading?: string;
+  name: string
+  hex: string
+  textColor: string
+  heading?: string
 }
 
 export interface ColorsProps {
-  colors: Color[];
-  heading?: string;
+  colors: Color[]
+  heading?: string
 }
 
-export const Colors = ({
-  colors,
-  heading
-}: ColorsProps) => {
+export const Colors = ({ colors, heading }: ColorsProps) => {
   return (
     <>
       <StyledColorsHeading>{heading}</StyledColorsHeading>
@@ -38,7 +35,7 @@ export const Colors = ({
         ))}
       </StyledColorsBoxContainer>
     </>
-  );
-};
+  )
+}
 
-export default Colors;
+export default Colors

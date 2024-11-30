@@ -1,23 +1,20 @@
-import { useState } from "react";
-import { Button } from "../../molecules/Button";
+import { useState } from 'react'
+import { Button } from '../../molecules/Button'
 import {
   StyledModalContainer,
   StyledModalFooterContainer,
   StyledModalBody,
   StyledModalButton,
-} from "./styledComponents";
+} from './styledComponents'
 
 export interface ModalProps {
-  bodyContent?: string;
-  modalButtonText: string;
+  bodyContent?: string
+  modalButtonText: string
 }
 
-export const Modal = ({
-  bodyContent,
-  modalButtonText
-}: ModalProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isButtonVisible, setIsButtonVisible] = useState(true);
+export const Modal = ({ bodyContent, modalButtonText }: ModalProps) => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isButtonVisible, setIsButtonVisible] = useState(true)
 
   return (
     <>
@@ -29,15 +26,15 @@ export const Modal = ({
               type="text"
               children="Cancel"
               onClick={() => {
-                setIsModalOpen(false);
-                setIsButtonVisible(true);
+                setIsModalOpen(false)
+                setIsButtonVisible(true)
               }}
             />
             <Button
               children="Submit"
               onClick={() => {
-                setIsModalOpen(false);
-                setIsButtonVisible(true);
+                setIsModalOpen(false)
+                setIsButtonVisible(true)
               }}
             />
           </StyledModalFooterContainer>
@@ -46,14 +43,14 @@ export const Modal = ({
       {isButtonVisible && (
         <StyledModalButton
           onClick={() => {
-            setIsModalOpen(true);
-            setIsButtonVisible(false);
+            setIsModalOpen(true)
+            setIsButtonVisible(false)
           }}
           children={modalButtonText}
         />
       )}
     </>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal

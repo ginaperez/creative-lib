@@ -1,12 +1,12 @@
-import styled from 'styled-components';
-import { theme } from 'styled-tools';
+import styled from 'styled-components'
+import { theme } from 'styled-tools'
 
 export interface ColorsHeadingProps {
-    children?: any;
+  children?: any
 }
 
-export type StyledColorsHeadingProps = Partial<HTMLHeadingElement> & ColorsHeadingProps;
+export type StyledColorsHeadingProps = Partial<HTMLHeadingElement> & ColorsHeadingProps
 
 export const StyledColorsHeading = styled.h2<StyledColorsHeadingProps>`
-    font-family: ${theme('fonts.nunito')};
+  font-family: ${theme('fonts.nunito')};
 `

@@ -1,2 +1,2 @@
-export * from './Tooltip';
-export * from './styledComponents';
+export * from './Tooltip'
+export * from './styledComponents'
