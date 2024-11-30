@@ -50,7 +50,7 @@ WithIcon.args = {
 export const Disabled = Template.bind({})
 
 Disabled.args = {
-  id: 'diabled-input',
+  id: 'disabled-input',
   type: 'text',
   placeholder: 'Disabled text',
   disabled: true,

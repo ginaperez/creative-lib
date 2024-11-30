@@ -1,6 +1,6 @@
 {
   "name": "creative-lib",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A collection of UX components",
   "private": false,
   "license": "MIT",
@@ -12,7 +12,6 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -41,7 +40,8 @@
     "publish-dry-run": "cd dist && npm publish --dry-run --access public ./",
     "publish-real": "cd dist && npm publish --access public ./",
     "lint": "eslint src/",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "depcheck": "npx depcheck"
   },
   "eslintConfig": {
     "extends": [
